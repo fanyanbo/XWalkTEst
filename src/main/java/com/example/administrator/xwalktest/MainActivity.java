@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
                 {
                     Intent mIntent = new Intent("com.qjy.action.browser2");
                     mIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    mIntent.putExtra("url", urlcontent);
+//                    mIntent.putExtra("url", urlcontent);
 //                    mIntent.putExtra("mode", 0);
 //                    mIntent.putExtra("core", core);
 //                    mIntent.putExtra("cache", mIsChecked);
