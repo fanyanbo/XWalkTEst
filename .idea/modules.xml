@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/APP_Browser.iml" filepath="$PROJECT_DIR$/APP_Browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/APP_Browser.iml" filepath="$PROJECT_DIR$/APP_Browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/CommonUISDK/ccExACommonUISDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/CommonUISDK/ccExACommonUISDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemWebViewSDK/ccExASystemWebViewSDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemWebViewSDK/ccExASystemWebViewSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/Support/Volley/ccExJVolley.iml" filepath="$PROJECT_DIR$/cc_sdk/Support/Volley/ccExJVolley.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SkySDK/ccSkySDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SkySDK/ccSkySDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SkyWebSDK/ccSkyWebSDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SkyWebSDK/ccSkyWebSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemServiceSDK/ccSystemServiceSDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemServiceSDK/ccSystemServiceSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemWebViewSDKExtra/ccSystemWebViewSDKExtra.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/SystemWebViewSDKExtra/ccSystemWebViewSDKExtra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cc_sdk/SkyMovieFramework/UserServiceSDK/ccUserServiceSDK.iml" filepath="$PROJECT_DIR$/cc_sdk/SkyMovieFramework/UserServiceSDK/ccUserServiceSDK.iml" />
+    </modules>
+  </component>
+</project>

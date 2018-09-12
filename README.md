@@ -1,2 +1,1 @@
-# XWalkTest
-测试千家悦内核与cordova以及coocaaosapi对接
+Android Studio构建分支
