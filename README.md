@@ -1,3 +1,3 @@
 Android Studio构建分支
 
-该分支是在master基础上进行重新，将cordova框架代码剥离到Android Library中，不放在app中了
+该分支是在master基础上进行重构，将cordova框架代码剥离到Android Library中，不放在app中了
