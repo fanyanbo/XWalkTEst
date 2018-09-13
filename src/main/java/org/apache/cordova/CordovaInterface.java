@@ -22,6 +22,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import org.apache.cordova.plugin.api.BusinessDataListener;
+import org.apache.cordova.plugin.api.CoocaaOSConnecter;
+
 import java.util.concurrent.ExecutorService;
 
 /**
@@ -91,5 +94,13 @@ public interface CordovaInterface {
      * Check for a permission.  Returns true if the permission is granted, false otherwise.
      */
     public boolean hasPermission(String permission);
+
+    public void setCoocaaOSConnecter(CoocaaOSConnecter connecter);
+
+    public CoocaaOSConnecter getCoocaaOSConnecter();
+
+    public void setCordovaBusinessDataListener(BusinessDataListener.CordovaBusinessDataListener listener);
+
+    public BusinessDataListener.CordovaBusinessDataListener getCordovaBusinessDataListener();
 
 }

@@ -29,6 +29,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Pair;
 
+import org.apache.cordova.plugin.api.BusinessDataListener;
+import org.apache.cordova.plugin.api.CoocaaOSConnecter;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -72,7 +74,9 @@ public class CordovaInterfaceImpl implements CordovaInterface {
         void onProgressChanged(int process);
     }
 
-    private CordovaInterfaceListener mCordovaListener;
+    private CordovaInterfaceListener mCordovaListener = null;
+    private volatile CoocaaOSConnecter mCoocaaOSConnecter = null;
+    private BusinessDataListener.CordovaBusinessDataListener mBusinessDataListener = null;
 
     public void setCordovaInterfaceListener(CordovaInterfaceListener listener) {
         this.mCordovaListener = listener;
@@ -329,5 +333,25 @@ public class CordovaInterfaceImpl implements CordovaInterface {
         {
             return true;
         }
+    }
+
+    @Override
+    public void setCoocaaOSConnecter(CoocaaOSConnecter connecter) {
+        mCoocaaOSConnecter = connecter;
+    }
+
+    @Override
+    public CoocaaOSConnecter getCoocaaOSConnecter() {
+        return mCoocaaOSConnecter;
+    }
+
+    @Override
+    public void setCordovaBusinessDataListener(BusinessDataListener.CordovaBusinessDataListener listener) {
+        mBusinessDataListener = listener;
+    }
+
+    @Override
+    public BusinessDataListener.CordovaBusinessDataListener getCordovaBusinessDataListener() {
+        return mBusinessDataListener;
     }
 }

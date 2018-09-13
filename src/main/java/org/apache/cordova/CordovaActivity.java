@@ -38,6 +38,8 @@ import android.view.WindowManager;
 import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 
+import org.apache.cordova.plugin.api.CoocaaOSConnecter;
+import org.apache.cordova.plugin.api.CoocaaOSConnecterDefaultImpl;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -75,7 +77,7 @@ import java.util.Locale;
  * deprecated in favor of the config.xml file.
  *
  */
-public class CordovaActivity extends Activity {
+public class CordovaActivity extends CordovaBaseActivity {
     public static String TAG = "CordovaActivity";
 
     // The webview for our app
@@ -98,6 +100,8 @@ public class CordovaActivity extends Activity {
     protected String launchUrl;
     protected ArrayList<PluginEntry> pluginEntries;
     protected CordovaInterfaceImpl cordovaInterface;
+
+    private CoocaaOSConnecter mCoocaaOSConnecter = null;
 
     /**
      * Called when the activity is first created.
@@ -135,8 +139,6 @@ public class CordovaActivity extends Activity {
                     WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
         }
 
-        super.onCreate(savedInstanceState);
-
         cordovaInterface = makeCordovaInterface();
         if (savedInstanceState != null) {
             cordovaInterface.restoreInstanceState(savedInstanceState);
@@ -172,6 +174,8 @@ public class CordovaActivity extends Activity {
                 Log.i("WebViewSDK","CordovaActivity onProgressChanged process = " + process);
             }
         });
+
+        super.onCreate(savedInstanceState);
     }
 
     protected void init() {
@@ -182,10 +186,28 @@ public class CordovaActivity extends Activity {
         }
         cordovaInterface.onCordovaInit(appView.getPluginManager());
 
+        //set IPC Connecter
+        if (getCmdConnectorListener() != null) {
+            if (mCoocaaOSConnecter == null) {
+                mCoocaaOSConnecter = new CoocaaOSConnecterDefaultImpl(this, getCmdConnectorListener());
+                cordovaInterface.setCoocaaOSConnecter(mCoocaaOSConnecter);
+            }
+        }
+
         // Wire the hardware volume controls to control media if desired.
         String volumePref = preferences.getString("DefaultVolumeStream", "");
         if ("media".equals(volumePref.toLowerCase(Locale.ENGLISH))) {
             setVolumeControlStream(AudioManager.STREAM_MUSIC);
+        }
+    }
+
+    @Override
+    public void onSuperCmdInit() {
+        super.onSuperCmdInit();
+        Log.i(TAG,"onSuperCmdInit CoocaaOSConnecter:" + mCoocaaOSConnecter);
+        if (mCoocaaOSConnecter == null) {
+            mCoocaaOSConnecter = new CoocaaOSConnecterDefaultImpl(this, getCmdConnectorListener());
+            cordovaInterface.setCoocaaOSConnecter(mCoocaaOSConnecter);
         }
     }
 

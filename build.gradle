@@ -2,7 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+//    buildToolsVersion "26.0.1"
+    buildToolsVersion gradle.ext.buildTools
     defaultConfig {
         applicationId "com.example.administrator.xwalktest"
         minSdkVersion 17
@@ -34,6 +35,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'
+    provided files(gradle.ext.layoutlibJar)
 //    compile 'com.android.support:appcompat-v7:28.0.0-rc01'
 //    compile 'com.android.support.constraint:constraint-layout:1.1.2'
 //    compile 'com.android.support:design:28.0.0-rc02'
@@ -42,4 +44,10 @@ dependencies {
 //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     compile(name: 'xwalk_shared_library', ext: 'aar')
+    compile project(path: ':ccSkySDK')
+    compile project(path: ':ccSkySDK')
+    compile project(path: ':ccSystemServiceSDK')
+    compile project(path: ':ccSystemServiceSDK')
+    compile project(path: ':ccUserServiceSDK')
+    compile project(path: ':ccUserServiceSDK')
 }

@@ -26,4 +26,13 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <feature name="CoocaaOSApi">
+        <param name="android-package" value="org.apache.cordova.plugin.api.CoocaaOSApi" />
+    </feature>
+    <feature name="startApp">
+        <param name="android-package" value="org.apache.cordova.plugin.start.startApp" />
+    </feature>
+    <feature name="broadcaster">
+        <param name="android-package" value="org.apache.cordova.plugin.broadcast.CDVBroadcaster" />
+    </feature>
 </widget>
