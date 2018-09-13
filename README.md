@@ -1,2 +1,4 @@
 # XWalkTest
 测试千家悦内核与cordova以及coocaaosapi对接
+
+该分支从app工程中剥离Cordova框架代码，将cordova一包代码放到CoocaaOSWebViewSDK的仓库中
