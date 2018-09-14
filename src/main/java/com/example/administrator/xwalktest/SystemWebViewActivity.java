@@ -6,7 +6,6 @@ import android.view.KeyEvent;
 
 import org.apache.cordova.CordovaActivity;
 
-
 /**
  * Created by fanyanbo on 2018/8/17.
  * Email: fanyanbo@skyworth.com
