@@ -79,7 +79,8 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
 
 //                String urlcontent = "http://beta.webapp.skysrt.com/appstore/webxtest/test7/test.html";
-                String urlcontent = "http://beta.webapp.skysrt.com/games/test/test.html";
+//                String urlcontent = "http://beta.webapp.skysrt.com/games/test/test.html";
+                String urlcontent = "http://beta.webapp.skysrt.com/fyb/screensaver/2/index.html";
                 Log.i(TAG,"onClick!!! url = " + urlcontent);
                 if( urlcontent != null && ( urlcontent.startsWith("http://") || urlcontent.startsWith("https://")))
                 {
