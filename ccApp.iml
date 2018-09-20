@@ -110,6 +110,7 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: javax.annotation:javax.annotation-api:1.2@jar" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: com.android.support.test.espresso:espresso-core-2.2.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: __local_jars__:D.\tools\adt-bundle-windows-x86_64\sdk\platforms\android-23\data\layoutlib.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.umeng.analytics:analytics:6.1.4@jar" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.android.support:animated-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="Gradle: com.android.support:support-compat-25.3.1" level="project" />

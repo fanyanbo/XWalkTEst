@@ -58,6 +58,33 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".CordovaView.BrowserCacheViewActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:process=":cache"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="coocaa.intent.action.browser.trans_cache_view" />
+            </intent-filter>
+        </activity>
+        <service android:name=".CordovaView.CordovaViewCacheService"
+            android:process=":cache">
+            <intent-filter>
+                <action android:name="coocaa.intent.action.browser.cache_web_service" />
+                <action android:name="coocaa.intent.action.browser.cache_web_activity" />
+            </intent-filter>
+        </service>
+        <receiver android:name=".CordovaView.CordovaViewTestBroadcast" >
+            <intent-filter>
+                <action android:name="browser.test_broadcast.xwalk" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>
