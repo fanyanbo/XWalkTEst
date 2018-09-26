@@ -20,7 +20,10 @@ public class SystemWebViewActivity extends CordovaExtActivity {
         if(url == null) {
             url = "https://www.baidu.com";
         }
+//        url = "http://www.qianjiayue.com/test/video.html";
+//        url = "http://beta.webapp.skysrt.com/fyb/ad/ali/index.html";
         Log.i("WebViewSDK", "onCreate getUrl = " + url);
+
         loadUrl(url);
     }
 
