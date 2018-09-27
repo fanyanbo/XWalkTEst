@@ -22,110 +22,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-        <!--android:theme="@style/AppTheme"-->
-        <activity
-            android:name=".BrowserActivity"
-            android:excludeFromRecents="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
+        <activity android:name=".XWalkWebViewActivity">
 
-                <action android:name="coocaa.intent.action.browser.test" />
-
-                <category android:name="coocaa.intent.category.APP_NO_UNINSTALL" />
-                <category android:name="coocaa.intent.category.MYAPP_DISMISS" />
-            </intent-filter>
-            <intent-filter>
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:scheme="file" />
-
-                <action android:name="app_browser.intent.action.WEBVIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".BrowserNoTransActivity"
-            android:excludeFromRecents="true"
-            android:theme="@style/BrowserNoTranslucent">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="coocaa.intent.action.browser.no_trans.test" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".BrowserNoRouteActivity"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTask">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="coocaa.intent.action.browser.no_route.test" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".BrowserNoTransNoRouteActivity"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTask"
-            android:theme="@style/BrowserNoTranslucent">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="coocaa.intent.action.browser.no_trans.no_route.test" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".CordovaView.BrowserCacheViewActivity"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTask"
-            android:process=":cache"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="coocaa.intent.action.browser.trans_cache_view.test" />
-            </intent-filter>
-        </activity>
-
-        <service android:name=".CordovaView.CordovaViewCacheService"
-            android:process=":cache">
-            <intent-filter>
-                <action android:name="coocaa.intent.action.browser.cache_web_service" />
-                <action android:name="coocaa.intent.action.browser.cache_web_activity" />
-            </intent-filter>
-        </service>
-        <receiver android:name=".CordovaView.CordovaViewTestBroadcast" >
-            <intent-filter>
-                <action android:name="browser.test_broadcast.test" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name=".BrowserXWalkActivity"
-            android:excludeFromRecents="true"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="coocaa.intent.action.browser.xwalk" />
-            </intent-filter>
-        </activity>
-
-
-
-   <!--     <activity android:name=".XWalkWebViewActivity">
-
-            &lt;!&ndash; <intent-filter> &ndash;&gt;
-            &lt;!&ndash; <action android:name="android.intent.action.MAIN" /> &ndash;&gt;
-            &lt;!&ndash; <category android:name="android.intent.category.LAUNCHER" /> &ndash;&gt;
-            &lt;!&ndash; </intent-filter> &ndash;&gt;
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
             <intent-filter>
                 <action android:name="com.qjy.action.browser" />
@@ -136,11 +40,11 @@
         <activity
             android:name=".SystemWebViewActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
-            &lt;!&ndash;<intent-filter>&ndash;&gt;
-                &lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                &lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;
-            &lt;!&ndash;</intent-filter>&ndash;&gt;
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
             <intent-filter>
                 <action android:name="com.qjy.action.browser2" />
 
@@ -179,8 +83,7 @@
             <intent-filter>
                 <action android:name="browser.test_broadcast.xwalk" />
             </intent-filter>
-        </receiver>-->
-
+        </receiver>
 
     </application>
 
